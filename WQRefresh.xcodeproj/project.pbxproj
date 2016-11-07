@@ -15,6 +15,14 @@
 		845CA0BE1DCC8695001CA777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845CA0BC1DCC8695001CA777 /* LaunchScreen.storyboard */; };
 		845CA0C91DCC8695001CA777 /* WQRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CA0C81DCC8695001CA777 /* WQRefreshTests.m */; };
 		845CA0D41DCC8695001CA777 /* WQRefreshUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CA0D31DCC8695001CA777 /* WQRefreshUITests.m */; };
+		845CA0E31DCC87F1001CA777 /* UIScrollView+WQRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CA0E21DCC87F1001CA777 /* UIScrollView+WQRefresh.m */; };
+		845CA0EA1DCC8851001CA777 /* WQRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CA0E91DCC8851001CA777 /* WQRefreshView.m */; };
+		845CA0ED1DCC8868001CA777 /* WQHeaderRefreshView0.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CA0EC1DCC8868001CA777 /* WQHeaderRefreshView0.m */; };
+		845CA0F01DCC8878001CA777 /* WQHeaderRefreshView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CA0EF1DCC8878001CA777 /* WQHeaderRefreshView1.m */; };
+		845CA0F31DCC8885001CA777 /* WQFooterRefreshView0.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CA0F21DCC8885001CA777 /* WQFooterRefreshView0.m */; };
+		845CA0F61DCC8892001CA777 /* WQFooterRefreshView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CA0F51DCC8892001CA777 /* WQFooterRefreshView1.m */; };
+		845CA0FA1DCC89CA001CA777 /* UIView+WQFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CA0F91DCC89CA001CA777 /* UIView+WQFrame.m */; };
+		84AB484C1DD011150085DA7A /* WQDrawIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB484B1DD011150085DA7A /* WQDrawIcon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,24 @@
 		845CA0CF1DCC8695001CA777 /* WQRefreshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WQRefreshUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		845CA0D31DCC8695001CA777 /* WQRefreshUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQRefreshUITests.m; sourceTree = "<group>"; };
 		845CA0D51DCC8695001CA777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845CA0E21DCC87F1001CA777 /* UIScrollView+WQRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+WQRefresh.m"; sourceTree = "<group>"; };
+		845CA0E41DCC8818001CA777 /* UIScrollView+WQRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+WQRefresh.h"; sourceTree = "<group>"; };
+		845CA0E81DCC8851001CA777 /* WQRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQRefreshView.h; sourceTree = "<group>"; };
+		845CA0E91DCC8851001CA777 /* WQRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQRefreshView.m; sourceTree = "<group>"; };
+		845CA0EB1DCC8868001CA777 /* WQHeaderRefreshView0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQHeaderRefreshView0.h; sourceTree = "<group>"; };
+		845CA0EC1DCC8868001CA777 /* WQHeaderRefreshView0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQHeaderRefreshView0.m; sourceTree = "<group>"; };
+		845CA0EE1DCC8878001CA777 /* WQHeaderRefreshView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQHeaderRefreshView1.h; sourceTree = "<group>"; };
+		845CA0EF1DCC8878001CA777 /* WQHeaderRefreshView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQHeaderRefreshView1.m; sourceTree = "<group>"; };
+		845CA0F11DCC8885001CA777 /* WQFooterRefreshView0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQFooterRefreshView0.h; sourceTree = "<group>"; };
+		845CA0F21DCC8885001CA777 /* WQFooterRefreshView0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQFooterRefreshView0.m; sourceTree = "<group>"; };
+		845CA0F41DCC8892001CA777 /* WQFooterRefreshView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQFooterRefreshView1.h; sourceTree = "<group>"; };
+		845CA0F51DCC8892001CA777 /* WQFooterRefreshView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQFooterRefreshView1.m; sourceTree = "<group>"; };
+		845CA0F71DCC88F7001CA777 /* WQRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQRefresh.h; sourceTree = "<group>"; };
+		845CA0F81DCC89CA001CA777 /* UIView+WQFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WQFrame.h"; sourceTree = "<group>"; };
+		845CA0F91DCC89CA001CA777 /* UIView+WQFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WQFrame.m"; sourceTree = "<group>"; };
+		84AB484A1DD011150085DA7A /* WQDrawIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQDrawIcon.h; sourceTree = "<group>"; };
+		84AB484B1DD011150085DA7A /* WQDrawIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQDrawIcon.m; sourceTree = "<group>"; };
+		84AB484D1DD01D4F0085DA7A /* WQConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQConstant.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +127,7 @@
 		845CA0AD1DCC8695001CA777 /* WQRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				845CA0E11DCC87E9001CA777 /* WQRefresh */,
 				845CA0B11DCC8695001CA777 /* AppDelegate.h */,
 				845CA0B21DCC8695001CA777 /* AppDelegate.m */,
 				845CA0B41DCC8695001CA777 /* ViewController.h */,
@@ -138,6 +165,31 @@
 				845CA0D51DCC8695001CA777 /* Info.plist */,
 			);
 			path = WQRefreshUITests;
+			sourceTree = "<group>";
+		};
+		845CA0E11DCC87E9001CA777 /* WQRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				845CA0F71DCC88F7001CA777 /* WQRefresh.h */,
+				84AB484D1DD01D4F0085DA7A /* WQConstant.h */,
+				845CA0E41DCC8818001CA777 /* UIScrollView+WQRefresh.h */,
+				845CA0E21DCC87F1001CA777 /* UIScrollView+WQRefresh.m */,
+				845CA0E81DCC8851001CA777 /* WQRefreshView.h */,
+				845CA0E91DCC8851001CA777 /* WQRefreshView.m */,
+				845CA0EB1DCC8868001CA777 /* WQHeaderRefreshView0.h */,
+				845CA0EC1DCC8868001CA777 /* WQHeaderRefreshView0.m */,
+				845CA0EE1DCC8878001CA777 /* WQHeaderRefreshView1.h */,
+				845CA0EF1DCC8878001CA777 /* WQHeaderRefreshView1.m */,
+				845CA0F11DCC8885001CA777 /* WQFooterRefreshView0.h */,
+				845CA0F21DCC8885001CA777 /* WQFooterRefreshView0.m */,
+				845CA0F41DCC8892001CA777 /* WQFooterRefreshView1.h */,
+				845CA0F51DCC8892001CA777 /* WQFooterRefreshView1.m */,
+				845CA0F81DCC89CA001CA777 /* UIView+WQFrame.h */,
+				845CA0F91DCC89CA001CA777 /* UIView+WQFrame.m */,
+				84AB484A1DD011150085DA7A /* WQDrawIcon.h */,
+				84AB484B1DD011150085DA7A /* WQDrawIcon.m */,
+			);
+			path = WQRefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +322,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845CA0FA1DCC89CA001CA777 /* UIView+WQFrame.m in Sources */,
+				845CA0ED1DCC8868001CA777 /* WQHeaderRefreshView0.m in Sources */,
+				845CA0EA1DCC8851001CA777 /* WQRefreshView.m in Sources */,
+				845CA0F61DCC8892001CA777 /* WQFooterRefreshView1.m in Sources */,
+				845CA0F31DCC8885001CA777 /* WQFooterRefreshView0.m in Sources */,
+				845CA0F01DCC8878001CA777 /* WQHeaderRefreshView1.m in Sources */,
+				84AB484C1DD011150085DA7A /* WQDrawIcon.m in Sources */,
 				845CA0B61DCC8695001CA777 /* ViewController.m in Sources */,
+				845CA0E31DCC87F1001CA777 /* UIScrollView+WQRefresh.m in Sources */,
 				845CA0B31DCC8695001CA777 /* AppDelegate.m in Sources */,
 				845CA0B01DCC8695001CA777 /* main.m in Sources */,
 			);
@@ -496,6 +556,7 @@
 				845CA0DA1DCC8695001CA777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845CA0DB1DCC8695001CA777 /* Build configuration list for PBXNativeTarget "WQRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +565,7 @@
 				845CA0DD1DCC8695001CA777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845CA0DE1DCC8695001CA777 /* Build configuration list for PBXNativeTarget "WQRefreshUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +574,7 @@
 				845CA0E01DCC8695001CA777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
