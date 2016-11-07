@@ -40,6 +40,7 @@ static NSString * const Identifier = @"WQCell";
                                                                     type:WQSuccess];
                        });
     };
+    self.tableView.headerRefreshVStyle = WQHeaderRefreshStyle1;
     self.tableView.refreshViewColor = [UIColor grayColor];
     self.tableView.iconColor = [UIColor whiteColor];
     self.tableView.fontColor = [UIColor whiteColor];

@@ -62,17 +62,18 @@
 
 - (void)showAnimation {
     [super showAnimation];
-    
+    self.labLoad.text = @"正在刷新...";
     self.arrowV.hidden = YES;
     [self.activityV startAnimating];
+    [self updateLayout];
 }
 
 - (void)stopAnimation {
     [super stopAnimation];
     
     self.labLoad.text = @"下拉刷新";
-    [self updateLayout];
     self.arrowV.transform = CGAffineTransformIdentity;
+    [self updateLayout];
 }
 
 - (void)fontColorChange {
