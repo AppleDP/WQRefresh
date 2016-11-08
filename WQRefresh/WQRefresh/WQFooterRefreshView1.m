@@ -45,6 +45,8 @@
 
 - (void)showAnimation {
     [super showAnimation];
+    self.labLoad.text = @"正在加载...";
+    [self updateLayout];
     [self.activityV startAnimating];
     self.arrowV.hidden = YES;
 }
@@ -91,11 +93,27 @@
 - (void)didDraggedCanNotRefresh:(NSNotification *)sender {
     [super didDraggedCanNotRefresh:sender];
     self.labLoad.text = @"上拉加载更多";
+    [UIView animateWithDuration:0.3
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         self.arrowV.transform = CGAffineTransformRotate(CGAffineTransformIdentity, M_PI);
+                     }
+                     completion:^(BOOL finished) {
+                     }];
 }
 
 - (void)didDraggedCanFooterRefresh:(NSNotification *)sender {
     [super didDraggedCanFooterRefresh:sender];
-    self.labLoad.text = @"释放加载更多";
+    self.labLoad.text = @"释放立即加载";
+    [UIView animateWithDuration:0.3
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         self.arrowV.transform = CGAffineTransformIdentity;
+                     }
+                     completion:^(BOOL finished) {
+                     }];
 }
 
 
@@ -104,10 +122,10 @@
     CGRect loadRect = [self calculateWithString:self.labLoad.text
                                            font:self.labLoad.font];
     self.labLoad.frame = loadRect;
-    self.labLoad.x = sWidth/2 - self.labLoad.width/2 + 5;
+    self.labLoad.x = sWidth/2 - self.labLoad.width/2 + 10;
     self.labLoad.y = sHeight/2 - self.labLoad.height/2;
     
-    self.arrowV.x = self.labLoad.x - self.arrowV.width - 5;
+    self.arrowV.x = self.labLoad.x - self.arrowV.width - 10;
     self.arrowV.y = sHeight/2 - self.arrowV.height/2;
     self.activityV.frame = self.arrowV.frame;
 }
