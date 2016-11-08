@@ -254,6 +254,7 @@
 		845CA0A31DCC8695001CA777 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WQ;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = jolimark;
 				TargetAttributes = {
@@ -473,7 +474,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WQRefresh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.WQRefresh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SUWQ.www.WQRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -484,7 +485,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WQRefresh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.WQRefresh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SUWQ.www.WQRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
