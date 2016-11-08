@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "A plug-in that combine with the drop-down refresh and pull on loading"
 
   s.description  = <<-DESC
-  Let your drop-down refresh and pull on loading more easy
+  A plug-in that combine with the drop-down refresh and pull on loading,it can let your drop-down refresh and pull on loading more easy
                    DESC
 
   s.homepage     = "https://github.com/AppleDP/WQRefresh"
@@ -13,8 +13,10 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
   s.author             = { "AppleDP" => "AppleDP@163.com" }
-  s.platform     = :ios
-  s.source       = { :git => "https://github.com/AppleDP/WQRefresh.git", :tag => "1.0.0" }
+  s.platform     = :ios, '7.0'
+  s.requires_arc = true
+  s.source       = { :git => "https://github.com/AppleDP/WQRefresh.git", :tag => s.version }
 
-  s.source_files  = "WQRefresh/WQRefresh/*.{h,m}"
+  s.source_files  = "WQRefresh/**/WQRefresh/*.{h,m}"
+  s.exclude_files = "Classes/Exclude"
 end
