@@ -255,31 +255,35 @@ static void * WQContentSizeContext   = &WQContentSizeContext;
                                    self.footerRefresh);
                 }
             }
+        }
+        if (self.isRefreshing) {
+            // 正在刷新时不可更改刷新类型
+            return;
+        }
+        if (offsetY < -self.lessOffset) {
+            self.refreshType = WQHeaderRefresh;
+            
+            // 松开手时可以下拉刷新
+            [[NSNotificationCenter defaultCenter] postNotificationName:kEndDraggingCanHeaderRefresh
+                                                                object:@{@"contentOffset" : [NSValue valueWithCGPoint:contentOffset],
+                                                                         @"contentSize"   : [NSValue valueWithCGSize:self.contentSize],
+                                                                         @"frame"         : [NSValue valueWithCGRect:self.frame]}];
+        }else if (offsetY > self.contentSize.height - self.height + rHeight) {
+            self.refreshType = WQFooterRefresh;
+            
+            // 松开手时可以上拉刷新
+            [[NSNotificationCenter defaultCenter] postNotificationName:kEndDraggingCanFooterRefresh
+                                                                object:@{@"contentOffset" : [NSValue valueWithCGPoint:contentOffset],
+                                                                         @"contentSize"   : [NSValue valueWithCGSize:self.contentSize],
+                                                                         @"frame"         : [NSValue valueWithCGRect:self.frame]}];
         }else {
-            if (self.isRefreshing) {
-                // 正在刷新时不可更改刷新类型
-                return;
-            }
-            if (offsetY < -self.lessOffset) {
-                self.refreshType = WQHeaderRefresh;
-                
-                // 松开手时可以下拉刷新
-                [[NSNotificationCenter defaultCenter] postNotificationName:kEndDraggingCanHeaderRefresh
-                                                                    object:[NSValue valueWithCGPoint:contentOffset]];
-            }else if (offsetY > self.contentSize.height - self.height + rHeight) {
-                self.refreshType = WQFooterRefresh;
-                
-                // 松开手时可以上拉刷新
-                [[NSNotificationCenter defaultCenter] postNotificationName:kEndDraggingCanFooterRefresh
-                                                                    object:[NSValue valueWithCGPoint:contentOffset]];
-                
-            }else {
-                self.refreshType = WQInitial;
-                
-                // 松开手时不可以刷新
-                [[NSNotificationCenter defaultCenter] postNotificationName:kEndDraggingCanNotRefresh
-                                                                    object:[NSValue valueWithCGPoint:contentOffset]];
-            }
+            self.refreshType = WQInitial;
+            
+            // 松开手时不可以刷新
+            [[NSNotificationCenter defaultCenter] postNotificationName:kEndDraggingCanNotRefresh
+                                                                object:@{@"contentOffset" : [NSValue valueWithCGPoint:contentOffset],
+                                                                         @"contentSize"   : [NSValue valueWithCGSize:self.contentSize],
+                                                                         @"frame"         : [NSValue valueWithCGRect:self.frame]}];
         }
     }else if (context == WQContentSizeContext) {
         CGSize contentSize = [(NSValue *)change[@"new"] CGSizeValue];
@@ -492,7 +496,13 @@ static const void *hiddenDurationKey      = &hiddenDurationKey;
                              refreshViewColorKey,
                              refreshViewColor,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    self.headerRefreshV.backgroundColor = refreshViewColor;
+    if (self.headerRefreshV) {
+        self.headerRefreshV.backgroundColor = refreshViewColor;
+    }
+    
+    if (self.footerRefreshV) {
+        self.footerRefreshV.backgroundColor = refreshViewColor;
+    }
 }
 - (UIColor *)refreshViewColor {
     UIColor *color = objc_getAssociatedObject(self,

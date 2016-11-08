@@ -146,7 +146,7 @@
 }
 
 
-#pragma mark 更新控件位置
+#pragma mark 私有方法
 - (void)startAnimation {
     CAKeyframeAnimation *animation0 = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
     animation0.values = @[[NSNumber numberWithFloat:self.view0.x],
