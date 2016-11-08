@@ -101,6 +101,7 @@
                      }
                      completion:^(BOOL finished) {
                      }];
+    [self updateLayout];
 }
 
 - (void)didDraggedCanFooterRefresh:(NSNotification *)sender {
@@ -114,6 +115,7 @@
                      }
                      completion:^(BOOL finished) {
                      }];
+    [self updateLayout];
 }
 
 

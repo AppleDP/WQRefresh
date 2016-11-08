@@ -35,7 +35,7 @@ static NSString * const Identifier = @"WQCell";
     /****************************** 刷 新 样 式 设 置 ******************************/
 //    self.tableView.hiddenDuration = 2.f;
 //    self.tableView.headerRefreshVStyle = WQHeaderRefreshStyle1;
-    self.tableView.footerRefreshVStyle = WQFooterRefreshStyle1;
+//    self.tableView.footerRefreshVStyle = WQFooterRefreshStyle1;
 //    self.tableView.refreshViewColor = [UIColor grayColor];
 //    self.tableView.iconColor = [UIColor whiteColor];
 //    self.tableView.fontColor = [UIColor whiteColor];
@@ -43,7 +43,7 @@ static NSString * const Identifier = @"WQCell";
     
     self.tableView.headerRefresh = ^(){
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
-                                     (int64_t)(5.0 * NSEC_PER_SEC)),
+                                     (int64_t)(3.0 * NSEC_PER_SEC)),
                        dispatch_get_main_queue(), ^{
                            [weakSelf.tableView stopRefreshingWithMessage:@"刷新成功"
                                                                     type:WQSuccess];
@@ -52,10 +52,10 @@ static NSString * const Identifier = @"WQCell";
     
     self.tableView.footerRefresh = ^(){
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
-                                     (int64_t)(5.0 * NSEC_PER_SEC)),
+                                     (int64_t)(3.0 * NSEC_PER_SEC)),
                        dispatch_get_main_queue(), ^{
-                           [weakSelf.tableView stopRefreshingWithMessage:@"加载成功"
-                                                                    type:WQSuccess];
+                           [weakSelf.tableView stopRefreshingWithMessage:@"加载失败"
+                                                                    type:WQFailed];
                        });
     };
 }

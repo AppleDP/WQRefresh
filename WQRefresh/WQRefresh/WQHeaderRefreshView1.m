@@ -136,12 +136,28 @@
 - (void)didDraggedCanNotRefresh:(NSNotification *)sender {
     [super didDraggedCanNotRefresh:sender];
     self.labLoad.text = @"下拉刷新";
+    [UIView animateWithDuration:0.3
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         self.arrowV.transform = CGAffineTransformIdentity;
+                     }
+                     completion:^(BOOL finished) {
+                     }];
     [self updateLayout];
 }
 
 - (void)didDraggedCanHeaderRefresh:(NSNotification *)sender {
     [super didDraggedCanHeaderRefresh:sender];
     self.labLoad.text = @"释放立即刷新";
+    [UIView animateWithDuration:0.3
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         self.arrowV.transform = CGAffineTransformRotate(CGAffineTransformIdentity, M_PI);
+                     }
+                     completion:^(BOOL finished) {
+                     }];
     [self updateLayout];
 }
 
