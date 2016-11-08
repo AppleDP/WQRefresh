@@ -106,8 +106,8 @@
 #pragma mark 私有方法
 - (void)startAnimation {
     CABasicAnimation *animation0 = [CABasicAnimation animationWithKeyPath:@"position.x"];
-    animation0.fromValue = [NSNumber numberWithFloat:self.view0.x];
-    animation0.toValue = [NSNumber numberWithFloat:sWidth/2 - itemW];
+    animation0.fromValue = [NSNumber numberWithFloat:self.view0.centerX];
+    animation0.toValue = [NSNumber numberWithFloat:sWidth/2 - itemW/2];
     animation0.duration = 0.5;
     animation0.repeatCount = MAXFLOAT;
     animation0.autoreverses = YES;
@@ -115,8 +115,8 @@
                             forKey:@"animation0"];
     
     CABasicAnimation *animation1 = [CABasicAnimation animationWithKeyPath:@"position.x"];
-    animation1.fromValue = [NSNumber numberWithFloat:self.view1.x];
-    animation1.toValue = [NSNumber numberWithFloat:sWidth/2];
+    animation1.fromValue = [NSNumber numberWithFloat:self.view1.centerX];
+    animation1.toValue = [NSNumber numberWithFloat:sWidth/2 + itemW/2];
     animation1.duration = 0.5;
     animation1.repeatCount = MAXFLOAT;
     animation1.autoreverses = YES;

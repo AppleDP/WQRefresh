@@ -149,9 +149,9 @@
 #pragma mark 私有方法
 - (void)startAnimation {
     CAKeyframeAnimation *animation0 = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
-    animation0.values = @[[NSNumber numberWithFloat:self.view0.x],
-                          [NSNumber numberWithFloat:sWidth/2 + itemW],
-                          [NSNumber numberWithFloat:sWidth/2 + itemW],
+    animation0.values = @[[NSNumber numberWithFloat:self.view0.centerX],
+                          [NSNumber numberWithFloat:sWidth/2 + 1.5*itemW],
+                          [NSNumber numberWithFloat:sWidth/2 + 1.5*itemW],
                           [NSNumber numberWithFloat:sWidth + itemW]];
     animation0.duration = 4.0;
     animation0.keyTimes = @[@0.0, @0.3, @0.6, @1.0];
@@ -160,9 +160,9 @@
                             forKey:@"animation0"];
     
     CAKeyframeAnimation *animation1 = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
-    animation1.values = @[[NSNumber numberWithFloat:self.view1.x],
-                          [NSNumber numberWithFloat:sWidth/2],
-                          [NSNumber numberWithFloat:sWidth/2],
+    animation1.values = @[[NSNumber numberWithFloat:self.view1.centerX],
+                          [NSNumber numberWithFloat:sWidth/2 + 0.5*itemW],
+                          [NSNumber numberWithFloat:sWidth/2 + 0.5*itemW],
                           [NSNumber numberWithFloat:sWidth + itemW]];
     animation1.duration = 4.0;
     animation1.keyTimes = @[@0.05, @0.35, @0.65, @1.0];
@@ -171,9 +171,9 @@
                             forKey:@"animation1"];
     
     CAKeyframeAnimation *animation2 = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
-    animation2.values = @[[NSNumber numberWithFloat:self.view2.x],
-                          [NSNumber numberWithFloat:sWidth/2 - itemW],
-                          [NSNumber numberWithFloat:sWidth/2 - itemW],
+    animation2.values = @[[NSNumber numberWithFloat:self.view2.centerX],
+                          [NSNumber numberWithFloat:sWidth/2 - 0.5*itemW],
+                          [NSNumber numberWithFloat:sWidth/2 - 0.5*itemW],
                           [NSNumber numberWithFloat:sWidth + itemW]];
     animation2.duration = 4.0;
     animation2.keyTimes = @[@0.1, @0.4, @0.7, @1.0];
@@ -182,9 +182,9 @@
                             forKey:@"animation2"];
     
     CAKeyframeAnimation *animation3 = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
-    animation3.values = @[[NSNumber numberWithFloat:self.view3.x],
-                          [NSNumber numberWithFloat:sWidth/2 - 2*itemW],
-                          [NSNumber numberWithFloat:sWidth/2 - 2*itemW],
+    animation3.values = @[[NSNumber numberWithFloat:self.view3.centerX],
+                          [NSNumber numberWithFloat:sWidth/2 - 1.5*itemW],
+                          [NSNumber numberWithFloat:sWidth/2 - 1.5*itemW],
                           [NSNumber numberWithFloat:sWidth + itemW]];
     animation3.duration = 4.0;
     animation3.keyTimes = @[@0.15, @0.45, @0.75, @1.0];
