@@ -3,7 +3,7 @@
 
 <p align="center" >
   <img src="https://raw.githubusercontent.com/AppleDP/WQRefresh/master/WQRefresh/EffectGif/Header0_Footer1.gif" alt="Header0_Footer1" title="Header0_Footer1"><br/>
-  <img src="https://raw.githubusercontent.com/AppleDP/WQRefresh/master/WQRefresh/EffectGif/Header1_Footer0.gif" alt="Header1_Footer0" title="Header1_Footer0">
+  <img src="https://raw.githubusercontent.com/AppleDP/WQRefresh/master/WQRefresh/EffectGif/Header1_Footer0.gif" alt="Header1_Footer0" title="Header1_Footer0"><br/>
  </p>
 
 # Install
