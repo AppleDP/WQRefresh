@@ -1,7 +1,7 @@
 # WQRefresh
 上拉加载 + 下拉刷新
 <p>
-  <img src=“https://github.com/AppleDP/WQRefresh/blob/master/WQRefresh/EffectGif/Header0_Footer1.gif” alt="Header0_Footer1" title="Header0_Footer1">
+  <img src=“ WQRefresh/WQRefresh/EffectGif/Header0_Footer1.gif ” alt="Header0_Footer1" title="Header0_Footer1">
   <img src=“https://github.com/AppleDP/WQRefresh/blob/master/WQRefresh/EffectGif/Header1_Footer0.gif” alt="Header1_Footer0" title="Header1_Footer0">
 </p>
 
