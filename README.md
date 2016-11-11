@@ -11,6 +11,9 @@
 pod 'WQRefresh', '~> 1.0.0'
 ```
 
+# Principle
+http://www.jianshu.com/p/6e68700dab64
+
 # Usage
 ## 简单调用
 ```objective-c
