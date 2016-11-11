@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIScrollView+WQRefresh.h"
+#import "WQRefresh.h"
 
 @interface ViewController ()<
     UITableViewDelegate,
